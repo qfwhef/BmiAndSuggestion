@@ -1,0 +1,355 @@
+/* 基础样式设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* 卡片样式 */
+.calculator-card, .results-card, .saved-records {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.calculator-card:hover, .results-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* 单选按钮样式 */
+.radio-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.activity-levels {
+    gap: 10px;
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.radio-label:hover {
+    background-color: #e2e8f0;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+.radio-label input[type="radio"]:checked + span {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.radio-label span {
+    margin-left: 5px;
+}
+
+/* 按钮样式 */
+.calculate-btn, .save-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.calculate-btn:hover, .save-btn:hover {
+    background-color: #2980b9;
+}
+
+.save-btn {
+    background-color: #2ecc71;
+    margin-top: 20px;
+}
+
+.save-btn:hover {
+    background-color: #27ae60;
+}
+
+/* 结果样式 */
+.hidden {
+    display: none;
+}
+
+.results-card h2, .saved-records h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.bmi-section {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.bmi-value {
+    margin-bottom: 10px;
+}
+
+#bmi-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3498db;
+}
+
+.label {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-left: 10px;
+}
+
+.bmi-category {
+    margin-bottom: 10px;
+}
+
+#body-type {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.goal {
+    color: #7f8c8d;
+}
+
+#goal {
+    font-weight: 500;
+    color: #e74c3c;
+}
+
+/* 营养部分样式 */
+.nutrition-section {
+    text-align: center;
+}
+
+.nutrition-section h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.metabolism, .calorie-recommendation {
+    margin-bottom: 20px;
+}
+
+.metabolism p, .calorie-recommendation p {
+    margin-bottom: 5px;
+    color: #7f8c8d;
+}
+
+.metabolism span, .calorie-recommendation span {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.nutrients {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.nutrient-item {
+    text-align: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.inner-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.protein {
+    background-color: rgba(46, 204, 113, 0.2);
+}
+
+.fat {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.carb {
+    background-color: rgba(52, 152, 219, 0.2);
+}
+
+.nutrient-item p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.nutrient-item span {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* 保存消息 */
+.save-message {
+    text-align: center;
+    margin-top: 15px;
+    color: #2ecc71;
+    font-weight: 500;
+}
+
+/* 历史记录 */
+.saved-records {
+    margin-top: 30px;
+}
+
+.no-records-message {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 20px;
+}
+
+.record-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.record-item .record-date {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.record-item .record-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.record-value {
+    font-weight: 500;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nutrients {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .circle {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .inner-circle {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .radio-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .radio-label {
+        width: 100%;
+    }
+} 
